@@ -38,7 +38,7 @@ defmodule Savepass.Mixfile do
      {:phoenix_live_reload, "~> 1.0", only: :dev},
      {:gettext, "~> 0.11"},
      {:cowboy, "~> 1.0"},
-     {:comeonin, "~> 3.0"},
+     {:comeonin, "~> 2.6"},
      {:coherence, "~> 0.3.1"},
      {:json_web_token, "~> 0.2.6"}]
   end
