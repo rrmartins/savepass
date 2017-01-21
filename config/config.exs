@@ -25,3 +25,20 @@ config :logger, :console,
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env}.exs"
+
+# %% Coherence Configuration %%   Don't remove this line
+config :coherence,
+  user_schema: Savepass.User,
+  repo: Savepass.Repo,
+  module: Savepass,
+  require_current_password: true,
+  logged_out_url: "/",
+  email_from_name: "Rodrigo Martins",
+  email_from_email: "rrmartinsjg@gmail.com",
+  opts: [:trackable, :invitable, :rememberable, :authenticatable, :recoverable, :lockable, :unlockable_with_token, registerable: [:new, :create]]
+
+config :coherence, Nixbreak.Coherence.Mailer,
+  adapter: Swoosh.Adapters.Local
+  # adapter: Swoosh.Adapters.Sendgrid,
+  # api_key: "your api key here"
+# %% End Coherence Configuration %%
