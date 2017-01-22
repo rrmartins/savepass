@@ -2,6 +2,13 @@ defmodule Savepass.User do
   use Savepass.Web, :model
   use Coherence.Schema
 
+  @sex_kind %{
+    male: "Male",
+    female: "Female"
+  }
+
+  def genres, do: @sex_kind
+
   schema "users" do
     field :name, :string
     field :email, :string
