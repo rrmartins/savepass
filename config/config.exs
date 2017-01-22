@@ -35,9 +35,13 @@ config :coherence,
   logged_out_url: "/",
   email_from_name: "Rodrigo Martins",
   email_from_email: "rrmartinsjg@gmail.com",
-  opts: [:trackable, :invitable, :rememberable, :authenticatable, :recoverable, :lockable, :unlockable_with_token, registerable: [:new, :create]]
+  opts: [
+    :trackable, :invitable, :rememberable,
+    :authenticatable, :recoverable, :lockable,
+    :unlockable_with_token, :registerable
+  ]
 
-config :coherence, Nixbreak.Coherence.Mailer,
+config :coherence, Savepass.Coherence.Mailer,
   adapter: Swoosh.Adapters.Local
   # adapter: Swoosh.Adapters.Sendgrid,
   # api_key: "your api key here"
