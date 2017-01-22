@@ -41,3 +41,6 @@ config :savepass, Savepass.Repo,
   database: "savepass_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :coherence, Savepass.Coherence.Mailer,
+  adapter: Swoosh.Adapters.Local
