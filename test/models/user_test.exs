@@ -22,6 +22,7 @@ defmodule Savepass.UserTest do
     changeset = User.changeset(%User{}, @invalid_attrs)
     refute changeset.valid?
   end
+  
 
   test "changeset with email invalid" do
     @invalid_attrs = @valid_attrs
