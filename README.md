@@ -1,5 +1,7 @@
 # Savepass
-https://travis-ci.org/rrmartins/savepass.svg?branch=master
+
+[![Build Status](https://travis-ci.org/rrmartins/savepass.svg?branch=master)](https://travis-ci.org/rrmartins/savepass)
+
 To start your Phoenix app:
 
   * Install dependencies with `mix deps.get`
