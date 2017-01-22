@@ -23,14 +23,13 @@ defmodule Savepass.Router do
   # Add this block
   scope "/" do
     pipe_through :browser
-
-    get "/", PageController, :index
+    coherence_routes
   end
 
   # Add this block
   scope "/app" do
     pipe_through :protected
-    coherence_routes
+
     coherence_routes :protected
   end
 
