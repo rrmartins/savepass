@@ -16,6 +16,16 @@
     <%= @user.email %>
   </li>
 
+  <li>
+    <strong>Registration:</strong>
+    <%= @user.record %>
+  </li>
+
+  <li>
+    <strong>Gender:</strong>
+    <%= @user.sex %>
+  </li>
+
 </ul>
 
 <%= link "Edit", to: registration_path(@conn, :edit) %> |

@@ -3,8 +3,8 @@ defmodule Savepass.User do
   use Coherence.Schema
 
   @sex_kind %{
-    male: "Male",
-    female: "Female"
+    Male: "Male",
+    Female: "Female"
   }
 
   def genres, do: @sex_kind
