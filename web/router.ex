@@ -31,6 +31,7 @@ defmodule Savepass.Router do
     pipe_through :protected
 
     coherence_routes :protected
+    resources "/informations", InformationController
   end
 
   pipeline :api do
