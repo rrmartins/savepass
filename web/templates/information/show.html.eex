@@ -1,0 +1,28 @@
+<h2>Show information</h2>
+
+<ul>
+
+  <li>
+    <strong>Description:</strong>
+    <%= @information.description %>
+  </li>
+
+  <li>
+    <strong>Active:</strong>
+    <%= @information.active %>
+  </li>
+
+  <li>
+    <strong>Type:</strong>
+    <%= @information.type %>
+  </li>
+
+  <li>
+    <strong>Title:</strong>
+    <%= @information.title %>
+  </li>
+
+</ul>
+
+<%= link "Edit", to: information_path(@conn, :edit, @information) %>
+<%= link "Back", to: information_path(@conn, :index) %>
