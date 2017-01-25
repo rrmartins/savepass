@@ -2,8 +2,29 @@ defmodule Savepass.InformationControllerTest do
   use Savepass.ConnCase
 
   alias Savepass.Information
-  @valid_attrs %{active: true, description: "some content", title: "some content", type: "some content"}
+  alias Savepass.User
+
+  @valid_attrs %{
+    active: true,
+    description: "some content",
+    title: "some content",
+    type: "some content"
+  }
+  @user_valid_attrs %{
+    sex: "Male",
+    email: "some@content.com",
+    name: "some content",
+    record: "42",
+    password: "secret",
+    password_confirmation: "secret"
+  }
   @invalid_attrs %{}
+
+  setup %{conn: conn} do
+    user = User.changeset(%User{}, @user_valid_attrs)
+    |> Repo.insert!
+    {:ok, conn: assign(conn, :current_user, user), user: user}
+  end
 
   test "lists all entries on index", %{conn: conn} do
     conn = get conn, information_path(conn, :index)

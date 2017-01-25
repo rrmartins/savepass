@@ -27,7 +27,7 @@ defmodule Savepass.Router do
   end
 
   # Add this block
-  scope "/app" do
+  scope "/app", Savepass do
     pipe_through :protected
 
     coherence_routes :protected

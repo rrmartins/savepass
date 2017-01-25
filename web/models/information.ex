@@ -1,6 +1,13 @@
 defmodule Savepass.Information do
   use Savepass.Web, :model
 
+  @type_kind %{
+    Text: "Text",
+    Password: "Password"
+  }
+
+  def types, do: @type_kind
+
   schema "informations" do
     field :description, :string
     field :active, :boolean, default: false
