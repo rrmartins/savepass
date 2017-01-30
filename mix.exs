@@ -19,7 +19,7 @@ defmodule Savepass.Mixfile do
   def application do
     [mod: {Savepass, []},
      applications: [:phoenix, :phoenix_pubsub, :phoenix_html, :cowboy, :logger, :gettext,
-                    :phoenix_ecto, :postgrex, :comeonin, :coherence]]
+                    :phoenix_ecto, :postgrex, :comeonin, :coherence, :ex_admin]]
   end
 
   # Specifies which paths to compile per environment.
@@ -40,7 +40,8 @@ defmodule Savepass.Mixfile do
      {:cowboy, "~> 1.0"},
      {:comeonin, "~> 2.6"},
      {:coherence, "~> 0.3.1"},
-     {:json_web_token, "~> 0.2.6"}]
+     {:json_web_token, "~> 0.2.6"},
+     {:ex_admin, "~> 0.8.2"}]
   end
 
   # Aliases are shortcuts or tasks specific to the current project.
