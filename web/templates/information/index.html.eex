@@ -1,0 +1,32 @@
+<h2>Listing informations</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Active</th>
+      <th>Type</th>
+      <th>Title</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for information <- @informations do %>
+    <tr>
+      <td><%= information.description %></td>
+      <td><%= information.active %></td>
+      <td><%= information.type %></td>
+      <td><%= information.title %></td>
+
+      <td class="text-right">
+        <%= link "Show", to: information_path(@conn, :show, information), class: "btn btn-default btn-xs" %>
+        <%= link "Edit", to: information_path(@conn, :edit, information), class: "btn btn-default btn-xs" %>
+        <%= link "Delete", to: information_path(@conn, :delete, information), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<%= link "New information", to: information_path(@conn, :new) %>
